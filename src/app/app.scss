@@ -1,0 +1,117 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+.toolbar-background-md{
+  color: white;
+  background: #7691FA;
+}
+
+.toolbar-title-md{
+  color: #FFFFFF;
+}
+
+.bluetheme {
+  color: white;
+  background: #7691FA;
+}
+
+.menu-background{
+  color: white;
+  background: #7691FA;
+}
+
+.text-menu{
+  text-align:center; 
+  color: white;
+}
+
+.padding-ion-card{
+  padding-right: 0px;
+}
+
+.font-baloo{
+  font-family: Baloo;
+  font-size: 20px;
+  color: #7691FA;
+  text-align: center;
+}
+
+.ion-item-padding{
+  padding-left: 0
+}
+
+.padding-content{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.font-size-content{
+  font-size: 1.6rem;
+}
+
+.card-despesa{
+  background: #F57437;
+  color: white;
+}
+
+.ion-avatar-size{
+  width: 50px;
+  height: 50px;
+}
+
+.padding-card{
+  padding: 7px 10px 7px 10px;
+}
+
+.ion-card-lightgray-bg{
+  background: #FAFAFA;
+}
+
+.price-color{
+  background-color: #F57437;
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+  font-weight: bold;
+  margin-right: 0px;
+}
+
+.floating-card{
+  position: absolute;
+  z-index: 2;
+}
+
+.margin-login-item{
+  margin: 0px;
+}
+
+.list-color{
+  background: #F5F5F5;
+}
+
+.button-size{
+  width: 100%;
+}
+
+.button-right{
+  padding-right: 13px;
+}
+
+.color-whitesmoke{
+  background: whitesmoke;
+}

@@ -1,0 +1,32 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Procurar Moradia</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <ion-label class="font-baloo">VAGAS DISPONÍVEIS</ion-label>
+
+  <ion-card *ngFor="let moradia of moradias | async" (click)='checkMoradia(moradia)'>
+    <ion-card-content class="padding-card">
+      <ion-item class="ion-item-padding">
+        <ion-avatar item-left>
+          <img src="{{moradia.imgUrl}}">
+        </ion-avatar>
+        <h2>{{moradia.nomeRepublica}}</h2>
+        <p>{{moradia.endereco}}, {{moradia.numero}}</p>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-fab right bottom>
+    <button ion-fab color="primary" (click)="cadastrarRepublica()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+
+</ion-content>

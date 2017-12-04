@@ -1,0 +1,42 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>moradia-informacao</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <ion-card class="floating-card">
+    <ion-card-content class="padding-card">
+      <!-- TODO: Remover card mock - proximo commit firebase-->
+      <ion-item class="ion-item-padding">
+
+          <ion-item class="ion-item-padding">
+            <ion-avatar item-left>
+              <img src="img/amanda.jpg">
+            </ion-avatar>
+            <h2>Amanda Soares</h2>
+            <p>Av. Belarmino Cotta Pacheco, 450</p>
+            <p>(34) 99912-0909</p>
+            </ion-item>
+            <h2 class="price-color">R$ 550,000000</h2>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-fab right bottom>
+      <button ion-fab class="bluetheme"><ion-icon name="apps"></ion-icon></button>
+      <ion-fab-list side="top">
+        <button (click)='abrirFotos()' ion-fab class="card-despesa"><ion-icon name="images"></ion-icon></button>
+        <button (click)="ligar('991316388')" ion-fab  class="card-despesa"><ion-icon name="chatbubbles"></ion-icon></button>
+      </ion-fab-list>
+    </ion-fab>
+
+<div #map id="map"></div>
+
+
+
+</ion-content>

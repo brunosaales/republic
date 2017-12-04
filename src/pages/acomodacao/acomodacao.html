@@ -1,0 +1,68 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Minha República</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-label class="font-baloo">ACOMODAÇÕES</ion-label>
+
+  <div style="text-align: center;">
+    <ion-avatar style="vertical-align: middle;
+    display: inline-block;">
+      <img src="img/acomodacao.png" style="height: 90%; width: 90%;">
+    </ion-avatar>
+  </div>
+
+  <ion-list class="padding-content">
+
+    <ion-label class="font-size-content">Preencha as informações abaixo:</ion-label>
+
+    <ion-item class="ion-item-padding">
+      <ion-label>Quarto mobiliado</ion-label>
+      <ion-checkbox [(ngModel)]="quartoMobiliado"></ion-checkbox>
+    </ion-item>
+
+    <ion-item class="ion-item-padding">
+      <ion-label>Garagem disponível</ion-label>
+      <ion-checkbox [(ngModel)]="garagem"></ion-checkbox>
+    </ion-item>
+
+    <ion-item class="ion-item-padding">
+      <ion-label>Fumantes</ion-label>
+      <ion-checkbox [(ngModel)]="fumantes"></ion-checkbox>
+    </ion-item>
+
+    <ion-item class="ion-item-padding">
+      <ion-label>Animais de estimação</ion-label>
+      <ion-checkbox [(ngModel)]="animaisEstimacao"></ion-checkbox>
+    </ion-item>
+
+    <ion-item class="ion-item-padding">
+      <ion-label>Público Alvo</ion-label>
+      <ion-select [(ngModel)]="tipoRepublica">
+      <ion-option value="masculina">Masculina</ion-option>
+      <ion-option value="feminina">Feminina</ion-option>
+      <ion-option value="mista">Mista</ion-option>
+    </ion-select>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>
+
+<ion-footer no-shadow>
+	<ion-toolbar position="bottom">
+    <ion-row>
+      <ion-col witdh-50 class="padding-card">
+        <button ion-button class="button-size" (click)="voltar()">Voltar</button>
+      </ion-col>
+      <ion-col witdh-50 class="padding-card button-right">
+        <button ion-button class="button-size" (click)="nextStep(quartoMobiliado, garagem, fumantes, animaisEstimacao, tipoRepublica)">Avançar</button>
+      </ion-col>
+    </ion-row>
+	</ion-toolbar>
+</ion-footer>

@@ -1,0 +1,59 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Minha República</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-label class="font-baloo">CADASTRE SUA REPÚBLICA</ion-label>
+
+  <div style="text-align: center;">
+    <ion-avatar style="vertical-align: middle;
+    display: inline-block;">
+      <img src="img/acomodacao.png" style="height: 90%; width: 90%;">
+    </ion-avatar>
+  </div>
+
+  <ion-list class="padding-content">
+
+    <ion-label class="font-size-content">Preencha as informações abaixo:</ion-label>
+
+    <ion-item class="ion-item-padding">
+      <ion-label floating>Nome da cidade</ion-label>
+      <ion-input [(ngModel)]="cidade" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item class="ion-item-padding">
+      <ion-label floating>Endereço</ion-label>
+      <ion-input [(ngModel)]="endereco" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item class="ion-item-padding">
+      <ion-label floating>Número</ion-label>
+      <ion-input [(ngModel)]="numero" type="number"></ion-input>
+    </ion-item>
+
+    <ion-item class="ion-item-padding">
+      <ion-label floating>Complemento</ion-label>
+      <ion-input [(ngModel)]="complemento" type="text"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>
+
+<ion-footer no-shadow>
+	<ion-toolbar position="bottom" style="background: whitesmoke !important;">
+    <ion-row>
+      <ion-col witdh-50 class="padding-card">
+        <button ion-button color="danger" class="button-size" (click)="cancelar()">Cancelar</button>
+      </ion-col>
+      <ion-col witdh-50 class="padding-card button-right">
+        <button ion-button class="button-size" (click)="nextStep(cidade, endereco, numero, complemento)">Avançar</button>
+      </ion-col>
+    </ion-row>
+	</ion-toolbar>
+</ion-footer>

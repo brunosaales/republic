@@ -1,0 +1,43 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
+    <ion-toolbar style="background: blue;">
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="bluetheme">
+
+    <ion-item style="background: #7691fa;">
+      <div style="text-align: center;">
+        <ion-avatar style="vertical-align: middle;
+          display: inline-block;">
+          <img src="{{ imgUrl }}" alt="{{ displayName }}" style="width: 90px; height: 90px;"/>
+        </ion-avatar>
+
+      </div>
+      <p style="text-align:center; color: white;">
+        Seja bem vindo, {{ displayName }}.
+      </p>
+    </ion-item>
+
+
+    <ion-list>
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        {{p.title}}
+      </button>
+
+      <button menuClose ion-item (click)="signOut()" style="bottom: 10px; position: absolute;">
+        Logout
+      </button>
+
+    </ion-list>
+
+
+
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

@@ -1,0 +1,51 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Minha República</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-label class="font-baloo">INFORMAÇÕES ADICIONAIS</ion-label>
+
+  <ion-list class="padding-content">
+
+    <ion-label class="font-size-content">Preencha as informações abaixo:</ion-label>
+
+    <ion-item class="ion-item-padding">
+      <ion-label floating>Nome da república (Opcional)</ion-label>
+      <ion-input [(ngModel)]="nomeRepublica" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item class="ion-item-padding">
+      <ion-label floating>Celular para contato</ion-label>
+      <ion-input [(ngModel)]="celular" type="number"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <!-- <ion-label class="font-size-content">Aqui vai o seletor de imagens</ion-label> -->
+
+  <div style="display:flex; flex-direction:column;justify-content:center">
+    <button ion-button (click)="capture()">Lets take a picture!</button>
+    <img [src]="captureDataUrl" *ngIf="captureDataUrl"/>
+  </div>
+
+  <button ion-button (click)="upload()" *ngIf="captureDataUrl">Upload to Firebase!</button>
+
+</ion-content>
+
+<ion-footer no-shadow>
+	<ion-toolbar position="bottom">
+    <ion-row>
+      <ion-col witdh-50 class="padding-card">
+        <button ion-button class="button-size" (click)="voltar()">Voltar</button>
+      </ion-col>
+      <ion-col witdh-50 class="padding-card button-right">
+        <button ion-button class="button-size" (click)="nextStep(nomeRepublica, celular)">Concluir</button>
+      </ion-col>
+    </ion-row>
+	</ion-toolbar>
+</ion-footer>

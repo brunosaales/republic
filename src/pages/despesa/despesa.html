@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Despesa</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-label class="font-baloo">DESPESAS</ion-label>
+
+  <div style="text-align: center;">
+    <ion-avatar style="vertical-align: middle;
+    display: inline-block;">
+      <img src="img/despesa.png" style="height: 90%; width: 90%;">
+    </ion-avatar>
+  </div>
+
+  <ion-list class="padding-content">
+
+    <ion-label class="font-size-content">Digite o valor da despesa mensal abaixo*:</ion-label>
+
+    <ion-item class="ion-item-padding">
+      <ion-label>Valor mensal</ion-label>
+      <!-- <ion-input [(ngModel)]="despesa" type="number"></ion-input> -->
+      <ion-input type="number" [(ngModel)]="despesa" (keyup)="amountChange()" placeholder="0.00"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-card class="card-despesa">
+    <ion-card-content>
+      *Este é o valor total, somando despesas gerais e serviços tais como aluguel, internet, energia, entre outros. Pode haver variações.
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+
+<ion-footer no-shadow>
+	<ion-toolbar position="bottom">
+    <ion-row>
+      <ion-col witdh-50 class="padding-card">
+        <button ion-button class="button-size" (click)="voltar()">Voltar</button>
+      </ion-col>
+      <ion-col witdh-50 class="padding-card button-right">
+        <button ion-button class="button-size" (click)="nextStep(despesa)">Avançar</button>
+      </ion-col>
+    </ion-row>
+	</ion-toolbar>
+</ion-footer>
